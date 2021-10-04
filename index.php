@@ -158,6 +158,3 @@ while ($cursorY < $totalY) {
 imagedestroy($img);
 
 die();
-
-
-
