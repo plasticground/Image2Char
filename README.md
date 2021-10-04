@@ -25,7 +25,8 @@ header('Pragma: no-cache');
 
 `Type: string (URL) | Supported formats: jpg, jpeg, png, tga, gif`
 
-This parameter sets the source image. Alpha channels will be replaced with white.
+
+This parameter sets the source image. Alpha channels will be replaced with white. GIF images use only the first frame.
 
 #### scale:
 
@@ -68,3 +69,13 @@ This parameter enable or disable the grayscale filter for source image.
 `Type: int (bool) | Min: 0 | Default: 0 | Max: 1`
 
 This parameter enable or disable the mean removal filter for source image.
+
+### Usage Example
+
+You can write parameters in any order.
+
+`http://127.0.0.1:8000/?img=http://your-cool-image.com/cute_cat.png&grayscale=1&contrast=-30&detail_level=8&mean_removal=1`
+
+`http://127.0.0.1:8000/?img=http://your-cool-image.com/dancing_cute_cat.gif`
+
+`http://127.0.0.1:8000/?brightness=1&symbols=☺♥&img=http://your-cool-image.com/cute_cat1.jpg`
